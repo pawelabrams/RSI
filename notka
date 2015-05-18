@@ -1,0 +1,17 @@
+Projekt #7. Równoległy algorytm NWD dla wielu liczb.
+Zadanie polega na napisaniu programu działającego w środowisku rozproszonym znajdującym największy wspólny dzielnik dla wielu liczb naturalnych.
+
+Założenia:
+
+Mile widziana implementacja z wykorzystaniem liczb wysokiej precyzji.
+Program musi mieć sensowne testy.
+Program musi mieć możliwość dziania na wielu maszynach.
+Należy mierzyć czas wykonywanych obliczeń tak, żeby porównać go dla uruchomień na różnej liczbie węzłów.
+Zadanie jest przewidziane dla 2 osób.
+
+http://en.wikipedia.org/wiki/Greatest_common_divisor
+https://docs.python.org/3.1/library/fractions.html?highlight=gcd#fractions.gcd
+http://numba.pydata.org/numba-doc/0.18.2/user/jit.html
+http://dispy.sourceforge.net/
+https://github.com/pawelabrams/RSI
+https://pythonhosted.org/Pyro4/intro.html
