@@ -1,4 +1,5 @@
-# coding=utf-8
+#!/usr/bin/env python2
+#  coding=utf-8
 import time
 import Pyro4 as pyro
 import sys
