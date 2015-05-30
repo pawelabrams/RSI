@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     numbers = []
     for x in range(0, numbers_count):
-        numbers.append((int(sys.argv[4]) if len(sys.argv) > 4 else 1) * random.randint(1, 10**12))
+        numbers.append((int(sys.argv[4]) if len(sys.argv) > 4 else 1) * random.randint(1, (int(sys.argv[5]) if len(sys.argv) > 5 else 10 ** 12)))
 
     print(numbers)
 
