@@ -50,5 +50,4 @@ if __name__ == "__main__":
         one_last_reduce.append(element.getret())
 
     # One last reduce:
-    print("The GCD of those is: %s" % reduce(lambda x, y: gcd(x, y), one_last_reduce))
-    print("--- %s seconds ---" % (time.time() - start_time))
+    print("%s, %s" % (reduce(lambda x, y: gcd(x,y), one_last_reduce), (time.time() - start_time))) # 1st: GCD, 2nd: time of exec
