@@ -8,8 +8,15 @@ from functools import reduce
 from __future__ import print_function
 
 class DistributedGCD(Object):
-	def dgcd(ls):
-		return reduce(lambda x, y: gcd(x,y), ls)
+    def __init__(self):
+        self.ls = []
+		self.ret = 1
+	def setls(self, ls):
+		self.ls = ls
+	def dgcd(self):
+		self.ret = reduce(lambda x, y: gcd(x,y), ls)
+	def getret(self):
+		return self.ret
 
 if __name__ == '__main__':
     # pyro.config.SERIALIZER = "pickle"
