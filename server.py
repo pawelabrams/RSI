@@ -1,20 +1,20 @@
 #!/usr/bin/env python2
 #  coding=utf-8
+from __future__ import print_function
 import time
 import Pyro4 as pyro
 import sys
 from fractions import gcd
 from functools import reduce
-from __future__ import print_function
 
-class DistributedGCD(Object):
-    def __init__(self):
-        self.ls = []
+class DistributedGCD():
+	def __init__(self):
+		self.ls = []
 		self.ret = 1
 	def setls(self, ls):
 		self.ls = ls
 	def dgcd(self):
-		self.ret = reduce(lambda x, y: gcd(x,y), ls)
+		self.ret = reduce(lambda x, y: gcd(x,y), self.ls)
 	def getret(self):
 		return self.ret
 
