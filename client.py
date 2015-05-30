@@ -21,7 +21,7 @@ if __name__ == "__main__":
         numbers.append((int(sys.argv[4]) if len(sys.argv) > 4 else 1) * random.randint(1, (
         int(sys.argv[5]) if len(sys.argv) > 5 else 10 ** 12)))  # mnożnik(4) * losowy_int_z_przedziału[1, max_losowa(5)]
 
-    print(numbers)
+    # print(numbers)
 
     # Server general config
     servers = ['PYRO:dg@localhost:']

@@ -16,7 +16,7 @@ if __name__ == "__main__":
         numbers.append((int(sys.argv[2]) if len(sys.argv) > 2 else 1) * random.randint(1, (
         int(sys.argv[3]) if len(sys.argv) > 3 else 10 ** 12)))
 
-    print(numbers)
+    # print(numbers)
 
     # Reduce
     print("%s, %s" % (reduce(lambda x, y: gcd(x,y), numbers), (time.time() - start_time))) # 1st: GCD, 2nd: time of exec
