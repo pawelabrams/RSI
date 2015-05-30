@@ -3,6 +3,7 @@
 import random
 import sys
 import time
+from math import ceil
 import Pyro4 as pyro
 
 if __name__ == "__main__":
@@ -11,5 +12,21 @@ if __name__ == "__main__":
     machine_count = int(sys.argv[1]) # liczba maszyn
     numbers_count = int(sys.argv[2]) # liczba liczb do sprawdzenia NWD
 
-	servers = ['PYRO:dg@localhost:9500']
-	block_size = int(numbers_count/machine_count)
+    numbers = []
+    for x in range(0, numbers_count):
+        numbers.append(random.randint(1, 10**12))
+
+	servers = ['PYRO:dg@localhost:']
+	block_size = int(ceil(numbers_count/machine_count))
+    block_count = int(ceil(numbers_count/block_size))
+
+    machine_no = 0
+    srv_array = []
+    for y in range(0, block_count):
+        url = servers[machine_no % len(servers)] + str(port_number)
+        dg = Pyro4.Proxy(url)
+        dg.setls(numbers[machine_no*block_size:(machine_no+1)*block_size])
+        srv_array.append(dg)
+        machine_no += 1
+        if machine_no % len(servers) == 0:
+            port_number += 1
