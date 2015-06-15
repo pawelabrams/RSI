@@ -25,7 +25,7 @@ class DistributedGCD():
 
 
 if __name__ == '__main__':
-    # pyro.config.SERIALIZER = "pickle"
+    pyro.config.SERIALIZER = "pickle"
     port_id = int(sys.argv[2])
     dg = DistributedGCD()
     print('DGCD started at port ' + str(port_id) + '!')

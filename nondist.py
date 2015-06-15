@@ -7,7 +7,6 @@ from fractions import gcd
 
 if __name__ == "__main__":
     # Some general config
-    start_time = time.time()
     numbers_count = int(sys.argv[1]) # liczba liczb do sprawdzenia NWD
 
     # Choose the numbers randomly
@@ -18,5 +17,6 @@ if __name__ == "__main__":
 
     # print(numbers)
 
+    start_time = time.time()
     # Reduce
     print("%s, %s" % (reduce(lambda x, y: gcd(x,y), numbers), (time.time() - start_time))) # 1st: GCD, 2nd: time of exec
